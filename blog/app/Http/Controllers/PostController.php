@@ -14,7 +14,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+       /* $posts = Post::all();
+        return $posts;
+
+        return view("posts.index")->with('posts',$posts);*/
+        return view("posts.index", ['posts' => Post::orderBy('id')->get()]);
     }
 
     /**
@@ -24,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.index');
     }
 
     /**
@@ -35,7 +39,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //datetime("d. m. Y H:m:s")
+        $this->validate($request,[
+            'content' => ['required'],
+        ]);
+        $post = new Post();
+        $post->content = $request->input('content');
+        $post->save();
+        return redirect()->route('post.index');
     }
 
     /**

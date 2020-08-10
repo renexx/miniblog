@@ -11,6 +11,19 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table("posts")->insert(array(
+            array(
+                "user_id" => 1,
+                "content" => "ahoj to som ja",
+                "created_at" => now(),
+                "updated_at" => now(),
+            ),
+            array(
+                "user_id" => 2,
+                "content" => "ahoj to som ja druhy",
+                "created_at" => now(),
+                "updated_at" => now(),
+            ),
+            ));
     }
 }
