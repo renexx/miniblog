@@ -5,6 +5,15 @@ body,html{
 .btn{
     background-color: #5f656b;
     border: none;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+.btn:hover{
+    background-color: red;
 }
 article p{
     font-size:25px;

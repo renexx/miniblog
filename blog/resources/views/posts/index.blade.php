@@ -13,11 +13,11 @@
          @csrf
 
          <div class="form-group">
-             <label for="content">Odkaz</label>
+
              <textarea name="content"
                        id="content"
                        class="form-control"
-                       placeholder="tu môžete pisat"
+                       placeholder="Tu môžete zanechať odkaz"
                        rows="3">{{ old('content') }}</textarea>
          </div>
 
@@ -32,7 +32,7 @@
 
 
             </header>
-            <div class="post-content"></div>
+            <div class="post-content">
                 <p>
                     {{$post->content}}
                 </p>
@@ -46,6 +46,13 @@
                         <small>Dátum: {{$post->created_at}}</small>
                     </time>
                 </p>
+                <!-- <form action="{{route('post.destroy',$post->id_post) }}" method="POST">
+                    @csrf
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn btn-primary  float-right">Odstrániť</button>
+              </form> -->
+            </div>
+
             <footer class="post-footer">
 
             </footer>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Http\Requests\SavePostRequest;
+use App\Http\Requests\UpdatePostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class PostController extends Controller
@@ -87,7 +88,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view("posts.edit",["post" => $post]);
     }
 
     /**
@@ -97,9 +98,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $post->update($request->all());
+        return redirect()->route("post.index");
     }
 
     /**
@@ -110,6 +112,12 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        try{
+            $post->delete();
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors(['Pri procesu odstránení došlo k chybe']);
+        }
+
+        return redirect()->route('post.index');
     }
 }

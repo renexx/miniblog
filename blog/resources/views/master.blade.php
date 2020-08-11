@@ -42,12 +42,12 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-item nav-link active" href="{{url('/stat')}}">Štatistiky</a>
+                      <a class="nav-item nav-link" href="{{url('/stat')}}">Štatistiky</a>
                       <a class="nav-item nav-link" href="{{url('/post')}}">Všetky odkazy</a>
                       <a class="nav-item nav-link" href="{{url('user/' . Auth::id())}}">Moje odkazy</a>
                       <a class="nav-item nav-link" href="{{url('user/' . Auth::id())}}">{{ Auth::user()->name}}</a>
 
-                      <a class="nav-item nav-link disabled" href="{{url('/logout')}}">Logout</a>
+                      <a class="nav-item nav-link" href="{{url('/logout')}}">Logout</a>
                     </div>
                   </div>
                 </nav>
