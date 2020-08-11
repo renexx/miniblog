@@ -19,31 +19,32 @@
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-            @endif    
+            @endif
 
             @if(Auth::check())
 
                 <nav class="navigation">
                     <div class="btn-group btn-group-sm pull-left">
-                        <a href="{{url('/post')}} " class="btn btn-default"> all posts</a>
-                        <a href="{{url('user/' . Auth::id())}}" class="btn btn-default"> my posts
+                        <a href="{{url('/stat')}} " class="btn btn-default">Štatistiky</a>
+                        <a href="{{url('/post')}} " class="btn btn-default">Všetky odkazy</a>
+                        <a href="{{url('user/' . Auth::id())}}" class="btn btn-default"> Moje odkazy
                     </div>
                     <div class="btn-group btn-group-sm pull-right">
                         <span class="username">{{ Auth::user()->name}}</span>
-                         <a href="{{url('/logout')}}" class="btn btn-default logout"> logout</a>    
-                    </div>        
+                         <a href="{{url('/logout')}}" class="btn btn-default logout"> logout</a>
+                    </div>
                 </nav>
             @else
             <div class="btn-group btn-group-sm pull-left">
                 <a href="{{url('/post')}} " class="btn btn-default"> all posts</a>
             </div>
             <div class="btn-group btn-group-sm pull-right">
-                
-                 <a href="{{url('/login')}}" class="btn btn-default"> login</a> 
-                 <a href="{{url('/register')}}" class="btn btn-default">register</a>       
-            </div>  
 
-            @endif      
+                 <a href="{{url('/login')}}" class="btn btn-default"> login</a>
+                 <a href="{{url('/register')}}" class="btn btn-default">register</a>
+            </div>
+
+            @endif
         </header>
 
         <main>

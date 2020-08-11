@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Http\Requests\SavePostRequest;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class PostController extends Controller
 {
     /**
@@ -19,6 +19,12 @@ class PostController extends Controller
         return $posts;
 
         return view("posts.index")->with('posts',$posts);*/
+        //return Post::distinct()->count('user_id');
+        //return Post::count('id_post');
+        //return \App\User::select('name')->join('posts', 'posts.user_id','=','users.id')->count('posts.user_id')->get();
+        //$topfive = DB::select("select users.name as meno, count(posts.user_id) as pocet_odkazov from users INNER JOIN posts ON users.id=posts.user_id GROUP BY meno ORDER BY COUNT(posts.user_id) desc LIMIT 5");
+         //return view("user.index",["users" => $users])
+
         return view("posts.index", ['posts' => Post::orderBy('created_at','desc')->limit(20)->get()]);
     }
 
@@ -45,7 +51,7 @@ class PostController extends Controller
             'content' => ['required'],
         ]);
 
-       
+
 
         $post = \Auth::user()->post()->create($request->all());
        // $post = new Post();
@@ -55,7 +61,7 @@ class PostController extends Controller
         //$post->save();
         //return $request->all();
         return redirect()->route('post.index');
-       
+
 
     }
 
