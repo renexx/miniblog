@@ -1,27 +1,36 @@
 body,html{
-    background-color:white;
+    background-color:#262b37;
+    color:white;
 }
-
+.btn{
+    background-color: #5f656b;
+    border: none;
+}
 article p{
     font-size:25px;
     padding-left: 10px;
-    
-   
+
+
 }
 article time{
     padding-left:10px;
 }
 article{
-    color:white;
-    background-color: #262b37;
-    border-radius: 25px;
-    margin-top:20px;
+    color:#5f656b;
+    /*background-color: #262b37;*/
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top:25px;
 }
 .written-by{
     font-size:20px;
     padding-left: 10px;
 }
 .written-by a{
-    
-    color: white;
+
+    color:#5f656b;
+}
+h1{
+    padding-top: 20px;
 }
