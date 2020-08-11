@@ -52,14 +52,23 @@
                   </div>
                 </nav>
             @else
-            <div class="btn-group btn-group-sm pull-left">
-                <a href="{{url('/post')}} " class="btn btn-default"> all posts</a>
-            </div>
-            <div class="btn-group btn-group-sm pull-right">
 
-                 <a href="{{url('/login')}}" class="btn btn-default"> login</a>
-                 <a href="{{url('/register')}}" class="btn btn-default">register</a>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link" href="{{url('/stat')}}">Štatistiky</a>
+                  <a class="nav-item nav-link" href="{{url('/post')}}">Všetky odkazy</a>
+                  <a class="nav-item nav-link" href="{{url('/login')}}">Login</a>
+                  <a class="nav-item nav-link" href="{{url('/register')}}">Register</a>
+
+                  <a class="nav-item nav-link" href="{{url('/logout')}}">Logout</a>
+                </div>
+              </div>
+            </nav>
 
             @endif
         </header>

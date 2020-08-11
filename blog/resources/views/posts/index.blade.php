@@ -29,8 +29,6 @@
         <article id="post-{{$post->id }}" class="post">
             <header class="post-header">
 
-
-
             </header>
             <div class="post-content">
                 <p>
