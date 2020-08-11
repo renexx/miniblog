@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Http\Requests\SavePostRequest;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -18,7 +19,7 @@ class PostController extends Controller
         return $posts;
 
         return view("posts.index")->with('posts',$posts);*/
-        return view("posts.index", ['posts' => Post::orderBy('id')->get()]);
+        return view("posts.index", ['posts' => Post::orderBy('created_at','desc')->limit(20)->get()]);
     }
 
     /**
@@ -37,16 +38,25 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SavePostRequest $request)
     {
         //datetime("d. m. Y H:m:s")
         $this->validate($request,[
             'content' => ['required'],
         ]);
-        $post = new Post();
-        $post->content = $request->input('content');
-        $post->save();
+
+       
+
+        $post = \Auth::user()->post()->create($request->all());
+       // $post = new Post();
+        //$post->content = $request->input('content');
+       // $post->user_id = $request->input(1)
+        //$post->created_at = $request->input('created_at').now();
+        //$post->save();
+        //return $request->all();
         return redirect()->route('post.index');
+       
+
     }
 
     /**
@@ -55,9 +65,12 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->user;
+        return $post ;
+        return view('post.show')->with('post', $post);
     }
 
     /**

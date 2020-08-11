@@ -1,3 +1,27 @@
-body{
-    background-color: azure;
+body,html{
+    background-color:white;
+}
+
+article p{
+    font-size:25px;
+    padding-left: 10px;
+    
+   
+}
+article time{
+    padding-left:10px;
+}
+article{
+    color:white;
+    background-color: #262b37;
+    border-radius: 25px;
+    margin-top:20px;
+}
+.written-by{
+    font-size:20px;
+    padding-left: 10px;
+}
+.written-by a{
+    
+    color: white;
 }

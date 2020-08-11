@@ -30,10 +30,16 @@
                     </div>
                     <div class="btn-group btn-group-sm pull-right">
                         <span class="username">{{ Auth::user()->name}}</span>
-                         <a href="{{url('auth/logout')}}" class="btn btn-default logout"> logout</a>    
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                            Logout
+                        </a>    
+                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </div>        
                 </nav>  
             @endif      
+            
         </header>
 
         <main>
