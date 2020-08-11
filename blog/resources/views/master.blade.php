@@ -30,9 +30,19 @@
                     </div>
                     <div class="btn-group btn-group-sm pull-right">
                         <span class="username">{{ Auth::user()->name}}</span>
-                         <a href="{{url('auth/logout')}}" class="btn btn-default logout"> logout</a>    
+                         <a href="{{url('/logout')}}" class="btn btn-default logout"> logout</a>    
                     </div>        
-                </nav>  
+                </nav>
+            @else
+            <div class="btn-group btn-group-sm pull-left">
+                <a href="{{url('/post')}} " class="btn btn-default"> all posts</a>
+            </div>
+            <div class="btn-group btn-group-sm pull-right">
+                
+                 <a href="{{url('/login')}}" class="btn btn-default"> login</a> 
+                 <a href="{{url('/register')}}" class="btn btn-default">register</a>       
+            </div>  
+
             @endif      
         </header>
 
