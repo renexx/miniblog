@@ -9,7 +9,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = \App\User::findOrFail($id);
-        return view("posts.index")
+        return view("posts.show")
             ->with("title", $user->name)
             ->with("posts", $user->post);
     }

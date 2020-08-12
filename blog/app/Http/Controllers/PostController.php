@@ -56,7 +56,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->user;
         return $post ;
-        return view('post.show')->with('post', $post);
+        return view('posts.show')->with('post', $post);
     }
 
     /**
