@@ -56,7 +56,11 @@ article{
 }
 .written-by a{
 
-    color:#5f656b;
+    color:#aab0b5;
+}
+.written-by a:hover{
+
+    color:white;
 }
 h1{
     padding-top: 20px;
