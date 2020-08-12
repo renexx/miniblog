@@ -15,7 +15,23 @@ body,html{
 .btn:hover{
     background-color: red;
 }
-
+.post-content{
+    position: relative;
+}
+.trash{
+    position: absolute;
+    top:0px;
+    right:0px;
+    background-color: #D9D9D9;
+    border:none;
+}
+.edit{
+    position: absolute;
+    top:0px;
+    right: 30px;
+    text-decoration: none;
+    color:#5f656b;
+}
 .post-content p{
     font-size: 25px;
     padding-left: 10px;

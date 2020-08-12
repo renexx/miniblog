@@ -1,5 +1,5 @@
 @extends('master')
-@section('title','All the posts')
+@section('title','Odkazy')
 
 @section('content')
 
@@ -41,11 +41,12 @@
                         <small>Dátum: {{$post->created_at}}</small>
                     </time>
                 </p>
-                <!-- <form action="{{route('post.destroy',$post->id_post) }}" method="POST">
+                 <form action="{{route('post.destroy',$post->id_post) }}" method="POST">
                     @csrf
                     {{ method_field('DELETE') }}
-                    <button type="submit" class="btn btn-primary  float-right">Odstrániť</button>
-              </form> -->
+                    <button type="submit" class="trash"><i class="fas fa-trash-alt"></i></button>
+                    <a href="{{route('post.edit', $post->id_post)}}" class="edit"><i class="fas fa-edit"></i></a>
+              </form>
             </div>
         </article>
         @empty

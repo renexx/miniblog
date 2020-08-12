@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title') / blog</title>
+        <title>@yield('title')</title>
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css')}}">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     </head>
     <body>
         <header class="container-fluid">
