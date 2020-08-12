@@ -8,10 +8,8 @@
          Odkazy
      </h1>
 
-
      <form action="{{ route('post.store') }}" method="POST">
          @csrf
-
          <div class="form-group">
 
              <textarea name="content"
@@ -20,7 +18,6 @@
                        placeholder="Tu môžete zanechať odkaz"
                        rows="3">{{ old('content') }}</textarea>
          </div>
-
          <button type="submit" class="btn btn-primary">Odoslať</button>
      </form>
 

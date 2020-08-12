@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>@yield('title') / blog</title>
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css')}}">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
     </head>
     <body>
         <header class="container">
@@ -19,10 +17,8 @@
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-            @endif    
-
+            @endif
             @if(Auth::check())
-
                 <nav class="navigation">
                     <div class="btn-group btn-group-sm pull-left">
                         <a href="{{url('/post')}} " class="btn btn-default"> all posts</a>
@@ -32,16 +28,14 @@
                         <span class="username">{{ Auth::user()->name}}</span>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                             Logout
-                        </a>    
+                        </a>
                         <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
-                    </div>        
-                </nav>  
-            @endif      
-            
+                    </div>
+                </nav>
+            @endif
         </header>
-
         <main>
             <div class="container">
                 @yield('content')

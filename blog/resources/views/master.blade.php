@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="{{ asset('css/main.css')}}">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
     </head>
     <body>
         <header class="container-fluid">
@@ -20,7 +19,6 @@
                     @endforeach
                 </ul>
             @endif
-
             @if(Auth::check())
 
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
