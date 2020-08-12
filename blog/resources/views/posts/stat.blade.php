@@ -21,6 +21,19 @@
           </tbody>
     </table>
     <table class="table table-dark">
+        <caption>Počet odkazov pridaných za dnešný deň</caption>
+         <thead>
+           <tr>
+             <th scope="col">Počet odkazov pridaných za dnešný deň</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>{{$todaypost}}</td>
+           </tr>
+         </tbody>
+   </table>
+    <table class="table table-dark">
          <caption>Celkový počet unikátnych mien, ktoré vložili odkaz do systému</caption>
         <thead>
             <tr>

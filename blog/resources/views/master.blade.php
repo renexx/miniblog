@@ -23,23 +23,8 @@
 
             @if(Auth::check())
 
-                <!-- <nav class="navigation">
-                    <div class="btn-group btn-group-sm pull-left">
-                        <a href="{{url('/stat')}} " class="btn btn-default">Štatistiky</a>
-                        <a href="{{url('/post')}} " class="btn btn-default">Všetky odkazy</a>
-                        <a href="{{url('user/' . Auth::id())}}" class="btn btn-default"> Moje odkazy
-                    </div>
-                    <div class="btn-group btn-group-sm pull-right">
-                        <span class="username">{{ Auth::user()->name}}</span>
-                         <a href="{{url('/logout')}}" class="btn btn-default logout"> logout</a>
-                    </div>
-                </nav> -->
-
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="#">Odkazy</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+                  <a class="navbar-brand" href="{{url('/post')}}">Odkazy</a>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                       <a class="nav-item nav-link" href="{{url('/stat')}}">Štatistiky</a>
@@ -47,36 +32,29 @@
                       <a class="nav-item nav-link" href="{{url('user/' . Auth::id())}}">Moje odkazy</a>
                       <a class="nav-item nav-link" href="{{url('user/' . Auth::id())}}">{{ Auth::user()->name}}</a>
 
-                      <a class="nav-item nav-link" href="{{url('/logout')}}">Logout</a>
+                      <a class="nav-item nav-link" href="{{url('/logout')}}">Odhlásiť</a>
                     </div>
                   </div>
                 </nav>
             @else
-
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a class="nav-item nav-link" href="{{url('/stat')}}">Štatistiky</a>
                   <a class="nav-item nav-link" href="{{url('/post')}}">Všetky odkazy</a>
-                  <a class="nav-item nav-link" href="{{url('/login')}}">Login</a>
-                  <a class="nav-item nav-link" href="{{url('/register')}}">Register</a>
-
-                  <a class="nav-item nav-link" href="{{url('/logout')}}">Logout</a>
+                  <a class="nav-item nav-link" href="{{url('/login')}}">Prihlásiť</a>
+                  <a class="nav-item nav-link" href="{{url('/register')}}">Registrovať</a>
                 </div>
               </div>
             </nav>
-
             @endif
         </header>
-
         <main>
             <div class="container">
                 @yield('content')
             </div>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script src='js/main.js'></script>
     </body>
 </html>

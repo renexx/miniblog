@@ -50,10 +50,6 @@
                     <button type="submit" class="btn btn-primary  float-right">Odstrániť</button>
               </form> -->
             </div>
-
-            <footer class="post-footer">
-
-            </footer>
         </article>
         @empty
             <h1>Nebol pridaný zatiaľ žiadný post</h1>
