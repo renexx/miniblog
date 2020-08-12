@@ -22,15 +22,16 @@ body,html{
     position: absolute;
     top:0px;
     right:0px;
-    background-color: #D9D9D9;
+    background-color: #343a40;
     border:none;
+    color:white;
 }
 .edit{
     position: absolute;
     top:0px;
     right: 30px;
     text-decoration: none;
-    color:#5f656b;
+    color:white;
 }
 .post-content p{
     font-size: 25px;
@@ -41,9 +42,10 @@ article time{
     padding-left:10px;
 }
 article{
-    color:#5f656b;
+    /*color:#5f656b;*/
+    color:white;
     /*background-color: #262b37;*/
-    background-color: #D9D9D9;
+    background-color:#343a40; /*#D9D9D9;bg*/
     border-radius: 15px;
     padding: 10px;
     margin-top:25px;
