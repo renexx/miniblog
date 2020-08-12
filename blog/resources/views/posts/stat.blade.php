@@ -8,7 +8,6 @@
         Štatistiky
      </h1>
      <table class="table table-dark">
-         <caption>Celkový počet odkazov</caption>
           <thead>
             <tr>
               <th scope="col">Celkový počet odkazov</th>
@@ -21,7 +20,6 @@
           </tbody>
     </table>
     <table class="table table-dark">
-        <caption>Počet odkazov pridaných za dnešný deň</caption>
          <thead>
            <tr>
              <th scope="col">Počet odkazov pridaných za dnešný deň</th>
@@ -34,7 +32,6 @@
          </tbody>
    </table>
     <table class="table table-dark">
-         <caption>Celkový počet unikátnych mien, ktoré vložili odkaz do systému</caption>
         <thead>
             <tr>
              <th scope="col">Celkový počet unikátnych mien, ktoré vložili odkaz do systému</th>
