@@ -79,6 +79,7 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
+        $this->authorize('edit-post',$post);
         $post->update($request->all());
         return redirect()->route("post.index");
     }
