@@ -1,6 +1,6 @@
 # Laravel aplikácia na zanechanie odkazov
-Na začiatku je potreba nastaviť databázu v súbore .env
-Keď je databáza nastavená, je potreba zadať príkaz composer dump-autoload.
+Na začiatku je potreba nastaviť databázu v súbore **.env**
+Keď je databáza nastavená, je potreba zadať príkaz **composer dump-autoload.**
 
 Po tomto príkaze môžeme zadať príkaz **php artisan migrate**, ak tento príkaz zobrazí nothing to change, zadajte **php artisan migrate:refresh**.
 Tým sa vytvoria databázové tabulky **users a posts**, ktoré sú však zatiaľ prázdne. Preto je potreba zadať príkaz **php artisan db:seed**. Tento príkaz naplní databázové tabulky testovacími dátami. Presnejšie sa vytvorí 5 používateľov a 15 odkazov.
