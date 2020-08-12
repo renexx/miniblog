@@ -58,7 +58,7 @@
     <tbody>
         @foreach($topfive as $top)
         <tr>
-         <td>{{$top->meno}}</td>
+         <td>{{$top->name}}</td>
          <td>{{$top->pocet_odkazov}}</td>
         </tr>
 

@@ -24,7 +24,7 @@
             @if(Auth::check())
 
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="{{url('/post')}}">Odkazy</a>
+                  <a class="navbar-brand" href="{{url('/')}}">Odkazy</a>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                       <a class="nav-item nav-link" href="{{url('/stat')}}">Štatistiky</a>
